@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=Courgette");
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+body {
+  color: white; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: "Gloria Hallelujah", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+.navbar-custom {
+  padding: 20px 0;
+  font-size: 20px; }
+  .navbar-custom a.navbar-brand {
+    color: white;
+    font-size: 34px;
+    font-family: "Courgette", sans-serif;
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear; }
+  .navbar-custom .nav-custom ul a {
+    color: white;
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out; }
+  .navbar-custom .nav-custom ul li.active a {
+    border-bottom: 3px solid black;
+    color: black; }
+  .navbar-custom .nav-custom ul a:hover {
+    text-decoration: underline; }
+  .navbar-custom .nav-custom .navbar-header .navbar-toggle {
+    padding: 4px 20px;
+    color: white; }
+
+.top-nav-collapse {
+  padding: 0;
+  background-color: rgba(248, 248, 248, 0.95); }
+  .top-nav-collapse a {
+    color: black !important; }
+  .top-nav-collapse i {
+    color: black; }
+
+@media (min-width: 767px) {
+  .navbar {
+    -webkit-transition: all .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out, padding .5s ease-in-out;
+    transition: all .5s ease-in-out, padding .5s ease-in-out; } }
+@media screen and (max-width: 768px) {
+  .navbar {
+    -webkit-transition: all .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out, padding .5s ease-in-out;
+    transition: all .5s ease-in-out, padding .5s ease-in-out; }
+
+  .navbar-toggle {
+    color: white; }
+
+  .navbar-brand {
+    line-height: 30px; } }
+.home {
+  background: black url("../img/01.jpg") 50% 50%;
+  padding: 200px 0;
+  background-size: cover;
+  font-weight: bold; }
+  .home .brand-heading {
+    margin: 30px 0 150px 0;
+    font-size: 50px; }
+  .home .brand-text {
+    font-size: 30px;
+    margin-bottom: 20px; }
+  .home .btn-theme {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border: 2px solid white;
+    transition: background 0.3s ease-in-out; }
+    .home .btn-theme:hover {
+      color: black;
+      background: white;
+      font-weight: 700; }
+
+@media screen and (max-width: 768px) {
+  .brand-heading {
+    font-size: 30px !important;
+    margin-left: 20px !important;
+    margin-bottom: 50px !important; }
+
+  .brand-text {
+    font-size: 20px !important;
+    margin: 80px 0 20px 20px !important; }
+
+  .btn-theme {
+    margin: 20px; } }
+.services .spinning {
+  -webkit-animation-name: fa-spin;
+  -moz-animation-name: fa-spin;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear; }
+.services .icons {
+  color: red;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid red;
+  line-height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 40px; }
+.services .service-icon-hover {
+  background-color: red;
+  color: white; }
+
+.section-info {
+  position: relative;
+  margin-bottom: 40px; }
+  .section-info .decorative-line {
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 60px;
+    height: 2px;
+    width: 50px;
+    background: black;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -moz-transition: all .5s; }
+  .section-info .section-header-text {
+    line-height: 60px;
+    font-size: 18px; }
+
+@media screen and (max-width: 768px) {
+  .decorative-line {
+    left: 46%; } }
+.content {
+  padding: 100px 0;
+  color: #3c3c3c; }
+
+.about {
+  background: rgba(248, 248, 248, 0.95); }
+  .about .item-pic {
+    position: relative;
+    margin-bottom: 20px; }
+  .about .about-us-text {
+    margin-bottom: 20px; }
+  .about .item-pic img {
+    display: block; }
+  .about .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(149, 149, 149, 0.9);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: all .5s ease;
+    padding: 20px; }
+    .about .overlay p {
+      color: white;
+      margin-bottom: 30%; }
+  .about .socials-wrapper {
+    position: relative;
+    height: 100%; }
+    .about .socials-wrapper .socials {
+      position: absolute;
+      top: 90%; }
+  .about .socials li {
+    display: inline-block;
+    margin-right: 15px; }
+    .about .socials li a {
+      color: white;
+      font-size: 20px; }
+      .about .socials li a:hover {
+        color: red; }
+  .about .item-pic:hover .overlay {
+    bottom: 0;
+    height: 100%; }
+  .about .team-member {
+    text-align: center; }
+  .about .teammate-name {
+    font-size: 20px; }
+
+@media screen and (max-width: 768px) {
+  .overlay .socials-wrapper li a {
+    font-size: 25px; } }
