@@ -44,7 +44,7 @@ $(document).ready(function () {
     // Cache selectors
     var lastId,
         topMenu = $("#top-menu"),
-        topMenuHeight = topMenu.outerHeight() + 15,
+        topMenuHeight = topMenu.outerHeight(),
         // All list items
         menuItems = topMenu.find("a"),
         // Anchors corresponding to menu items
@@ -59,10 +59,10 @@ $(document).ready(function () {
     // so we can get a fancy scroll animation
     menuItems.click(function (e) {
         var href = $(this).attr("href"),
-            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 60;
         $('html, body').stop().animate({
             scrollTop: offsetTop
-        }, 300);
+        }, 350);
         e.preventDefault()
     });
 
@@ -93,14 +93,21 @@ $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav: true, // Show next and prev buttons
+        // navigationText: ["prev","next"],
+        navText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+        ],
         responsiveClass:true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                nav: false
             },
             600:{
-                items:2
+                items:2,
+                nav: false
             },
             1000:{
                 items:4
