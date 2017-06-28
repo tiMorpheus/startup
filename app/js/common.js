@@ -90,6 +90,8 @@ $(document).ready(function () {
         }
     });
 
+
+    // ABOUT US CAROUSEL
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -114,5 +116,92 @@ $(document).ready(function () {
             }
         }
     });
+    //----------------------------------
+
+
+
+    //LATEST WORKS isotope
+
+    var $container = $('.portfolio-wrap');
+    var $filter = $('#isotope-filter');
+    // Initialize isotope
+    $container.isotope({
+        filter: '*',
+        layoutMode: 'fitRows',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear'
+        }
+    });
+    // Filter items when filter link is clicked
+    $filter.find('a').click(function () {
+        var selector = $(this).attr('data-filter');
+        $filter.find('a').removeClass('current');
+        $(this).addClass('current');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                animationDuration: 750,
+                easing: 'linear',
+                queue: false,
+            }
+        });
+        return false;
+    });
+
+    // portfolio isotope
+    var container = $('.portfolio-wrap');
+
+    function splitColumns() {
+        var winWidth = $(window).width(),
+            columnNumb = 1;
+
+
+        if (winWidth > 1024) {
+            columnNumb = 4;
+        } else if (winWidth > 900) {
+            columnNumb = 2;
+        } else if (winWidth > 479) {
+            columnNumb = 2;
+        } else if (winWidth < 479) {
+            columnNumb = 1;
+        }
+
+        return columnNumb;
+    }
+
+    function setColumns() {
+        var winWidth = $(window).width(),
+            columnNumb = splitColumns(),
+            postWidth = Math.floor(winWidth / columnNumb);
+
+        container.find('.portfolio-box').each(function () {
+            $(this).css( {
+                width : postWidth + 'px'
+            });
+        });
+    }
+
+    function setProjects() {
+        setColumns();
+        container.isotope('reLayout');
+    }
+
+    container.imagesLoaded(function () {
+        setColumns();
+    });
+
+
+    $(window).bind('resize', function () {
+        setProjects();
+    });
+
+//*-------------------------------------------
+
+// Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle').click();
+    });
+
 
 });
