@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css">
     <script src="https://use.fontawesome.com/4c651940a8.js"></script>
     <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -143,7 +144,7 @@
             </div>
         </div>
         <div class=" row ">
-            <div class="col-xs-12 owl-carousel owl-theme">
+            <div id="about-us-carousel" class="col-xs-12 owl-carousel owl-theme">
                 <div class="item">
                     <div class="item-pic">
                         <img src="img/dev.jpg" alt="dev">
@@ -422,7 +423,9 @@
             <ul id="portfolio-items" class="portfolio-wrap">
                 <li class="col-xs-12 col-sm-6 col-md-3 single-portfolio branding design">
                     <figure>
+
                         <img src="img/portfolio/p1.jpg" alt=""/>
+
                         <figcaption>
                             <h5>Creative Zoe</h5>
                             <p class="filter-value">
@@ -580,12 +583,12 @@
             </div>
             <div class="col-sm-7 col-xs-12">
                 <div class="blog-date">
-                    18<br>
-                    <span class="blog-date-month">oct</span>
+                    10<br>
+                    <span class="blog-date-month">mar</span>
                 </div>
                 <div class="blog-item-title ">
                     <span class="blog-title red-text">
-                        Startup ideas needs to be funded
+                        Innovation and support
                     </span>
                     <br>
                     <span class="blog-author">
@@ -600,7 +603,7 @@
                     voluptatum. Assumenda est nisi perspiciatis quia, similique tempora totam? Debitis fuga mollitia
                     nemo.
                 </p>
-                <a href="#" class="text-uppercase red-text">Read more</a>
+                <a href="#" class="blog-readmore text-uppercase red-text">Read more</a>
 
             </div>
 
@@ -612,17 +615,17 @@
             </div>
             <div class="col-sm-7 col-xs-12">
                 <div class="blog-date">
-                    18<br>
-                    <span class="blog-date-month">oct</span>
+                    1<br>
+                    <span class="blog-date-month">jun</span>
                 </div>
                 <div class="blog-item-title ">
                     <span class="blog-title red-text">
-                        Startup ideas needs to be funded
+                        Healthy weekend's with us
                     </span>
                     <br>
                     <span class="blog-author">
-                        By <span class="red-text author-name"> Tymur Tolochko</span>
-                         in <span class="red-text department"> Development</span>
+                        By <span class="red-text author-name"> John Peterson</span>
+                         in <span class="red-text department"> Marketing</span>
                     </span>
                 </div>
                 <p>
@@ -632,7 +635,7 @@
                     voluptatum. Assumenda est nisi perspiciatis quia, similique tempora totam? Debitis fuga mollitia
                     nemo.
                 </p>
-                <a href="#" class="text-uppercase red-text">Read more</a>
+                <a href="#" class="blog-readmore text-uppercase red-text">Read more</a>
 
             </div>
 
@@ -664,7 +667,7 @@
                     voluptatum. Assumenda est nisi perspiciatis quia, similique tempora totam? Debitis fuga mollitia
                     nemo.
                 </p>
-                <a href="#" class="text-uppercase red-text">Read more</a>
+                <a href="#" class="blog-readmore text-uppercase red-text">Read more</a>
 
             </div>
 
@@ -676,14 +679,174 @@
 </section>
 <!--BLOG END-->
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--CLIENTS START-->
+<section id="clients" class="clients content">
+    <div class="container">
+        <!-- Swiper Clients -->
+        <div class="swiper-slider swiper-clients">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/01.png" alt="Clients Logo">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/02.png" alt="Clients Logo">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/03.png" alt="Clients Logo">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/04.png" alt="Clients Logo">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/05.png" alt="Clients Logo">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-clients-img" src="img/clients/06.png" alt="Clients Logo">
+                </div>
+            </div>
+        </div>
+        <!-- End Swiper Clients -->
+
+
+        <div id="clients-carousel" class="owl-carousel owl-theme text-center">
+            <div class="client-item">
+                <p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dignissimos doloribus
+                    iure iusto rem.</p>
+                <span class="client-name">Lorem ipsum.</span></div>
+            <div class="client-item">
+                <p class="quote">Aperiam beatae commodi consequuntur, ducimus eius eveniet, labore nemo nobis quae
+                    reiciendis rem rerum.</p>
+                <span class="client-name">Aliquid, perferendis!</span></div>
+            <div class="client-item">
+                <p class="quote">Aperiam atque deleniti dolorem iste nulla pariatur perferendis, rem sint, sit veritatis
+                    vero voluptate?</p>
+                <span class="client-name">Recusandae, tempore.</span></div>
+            <div class="client-item">
+                <p class="quote">Accusamus, adipisci aut, delectus excepturi exercitationem hic id laudantium nobis odio
+                    officia repellat totam?</p>
+                <span class="client-name">Maiores, pariatur.</span></div>
+            <div class="client-item">
+                <p class="quote">Ab amet debitis dolores, exercitationem facere fugiat harum necessitatibus omnis, porro
+                    quaerat quasi vitae.</p>
+                <span class="client-name">Accusamus, saepe?</span></div>
+        </div>
+
+    </div>
+
+</section>
+<!--CLIENTS END-->
+
+<!--CONTACT START-->
+<section id="contact" class="contact content">
+    <div class="container">
+        <div class="section-info">
+            <h2 class="section-header text-uppercase text-center">Get in touch</h2>
+            <span class="decorative-line"></span>
+            <p class="section-header-text text-center">We offer ipsum dolor sit amet, consetetur sadipscing elitr
+                amet</p>
+        </div>
+
+        <div class="row">
+            <div class="our-contacts col-sm-4  text-center">
+                <div class="contact-info">
+                    <span class="contact-info-title">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><b>Address</b>
+                    </span>
+                    <p class="contact-info-text"> 317, 7th avenue somewhere</p>
+                </div>
+                <div class="contact-info">
+                    <span class="contact-info-title">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <b>HOTLINE(24X7)</b>
+                    </span>
+                    <p class="contact-info-text">
+                        +38063 060 56 03,<br>
+                        +88 91723 38145
+                    </p>
+                </div>
+                <div class="contact-info">
+                    <span class="contact-info-title">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> <b>E-MAIL</b>
+                    </span>
+                    <p class="contact-info-text">
+                        tymurtolochko@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-8 text-center">
+
+
+                <form action="*" class="contact-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" name="name" placeholder="YOUR NAME" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" name="company" placeholder="COMPANY NAME">
+                        </div>
+                    </div>
+
+
+                    <div class="form-message col-sm-12">
+                        <textarea name="message" id="message"  rows="5" placeholder="WRITE YOUR MESSAGE"></textarea>
+                    </div>
+
+                    <button class="btn  form-btn" type="submit">SEND MESSAGE</button>
+                    <p class="form-tip"><span class="red-text">* </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,maiores.</p>
+
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--CONTACT END-->
+<footer id="footer" class="footer content text-center">
+
+    <ul class="footer-socials">
+        <li>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+    <span class="decorative-line"></span>
+    <p class="copy">&copy; Tymur Tolochko</p>
+
+</footer>
+
+<!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="libs/swiper/swiper.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="js/viewportchecker.js"></script>
-<script src="libs/isotope.pkgd.min.js"></script>
+<script src="libs/isotope/isotope.pkgd.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 <script src="js/common.js"></script>
+<script src="js/swiper.js"></script>
+
+<script src="js/jquery.back-to-top.js"></script>
 </body>
 </html>

@@ -92,9 +92,10 @@ $(document).ready(function () {
 
 
     // ABOUT US CAROUSEL
-    $('.owl-carousel').owlCarousel({
+    $('#about-us-carousel').owlCarousel({
         loop:true,
         margin:10,
+        dots: false,
         nav: true, // Show next and prev buttons
         // navigationText: ["prev","next"],
         navText: [
@@ -118,6 +119,26 @@ $(document).ready(function () {
     });
     //----------------------------------
 
+    // CLIENTS CAROUSEL
+
+    $('#clients-carousel').owlCarousel({
+        navigation : true, // Show next and prev buttons
+        navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        slideSpeed : 400,
+        pagination:false,
+        items : 1,
+        rewindNav: true,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        itemsTablet:[768,3],    //As above.
+        // itemsMobile:[479,2],
+        itemsMobile:[320,1],
+        stopOnHover:true,
+        autoPlay:true
+    });
+
+
+    //----------------------------------
 
 
     //LATEST WORKS isotope
@@ -187,9 +208,7 @@ $(document).ready(function () {
         container.isotope('reLayout');
     }
 
-    container.imagesLoaded(function () {
-        setColumns();
-    });
+
 
 
     $(window).bind('resize', function () {
@@ -202,6 +221,8 @@ $(document).ready(function () {
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle').click();
     });
+
+
 
 
 });

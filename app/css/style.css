@@ -1,3 +1,8 @@
+/* eg: @include user-select(none); */
+/* eg: @include rotate(45deg); */
+/* eg: @include translate3d(0,0,0); */
+/* eg: @include border-radius(3px); */
+/* eg: @include visibility-backface(hidden); */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
@@ -101,7 +106,11 @@ h6 {
   .navbar {
     -webkit-transition: all .5s ease-in-out, padding .5s ease-in-out;
     -moz-transition: all .5s ease-in-out, padding .5s ease-in-out;
-    transition: all .5s ease-in-out, padding .5s ease-in-out; }
+    transition: all .5s ease-in-out, padding .5s ease-in-out;
+    background: rgba(248, 248, 248, 0.95); }
+    .navbar a,
+    .navbar .navbar-toggle {
+      color: black !important; }
 
   .navbar-toggle {
     color: white; }
@@ -387,10 +396,15 @@ h6 {
   margin-right: 0; }
 .blog .img-responsive {
   margin: 0 20px 20px 0 !important; }
+.blog .blog-readmore {
+  letter-spacing: 3px; }
 .blog .blog-item {
   padding: 0 0 30px 0;
   margin-bottom: 40px;
   border-bottom: 1px solid #d9d9d9; }
+  .blog .blog-item:nth-child(2n-1) {
+    display: flex;
+    flex-direction: row-reverse; }
   .blog .blog-item:last-child {
     border-bottom: none; }
   .blog .blog-item .blog-date {
@@ -428,6 +442,8 @@ h6 {
       color: black; }
 
 @media screen and (max-width: 450px) {
+  .blog .blog-item:nth-child(2n-1) {
+    display: block; }
   .blog .blog-item .blog-date {
     width: 50px;
     height: 50px;
@@ -437,9 +453,9 @@ h6 {
   .blog .blog-item .blog-item-title {
     margin-bottom: 15px; }
     .blog .blog-item .blog-item-title .blog-title {
-      font-size: 17px; }
+      font-size: 16px; }
     .blog .blog-item .blog-item-title .blog-author {
-      font-size: 15px; } }
+      font-size: 14px; } }
 @media screen and (max-width: 768px) {
   .section-info h2 {
     font-size: 26px; }
@@ -465,3 +481,195 @@ h6 {
     margin-bottom: 20px; }
     .blog .blog-item .blog-item-title .blog-title {
       font-size: 18px; } }
+.clients {
+  background: #eee; }
+  .clients .swiper-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 50px; }
+  .clients .swiper-clients-img {
+    display: block;
+    width: 190px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    cursor: pointer;
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+    .clients .swiper-clients-img:hover {
+      opacity: 0.8;
+      transition-duration: 200ms;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+  .clients .owl-theme .owl-dots .owl-dot.active span,
+  .clients .owl-theme .owl-dots .owl-dot:hover span {
+    background: red; }
+  .clients .client-item {
+    margin-bottom: 25px; }
+    .clients .client-item .quote {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px; }
+    .clients .client-item .client-name {
+      font-size: 25px;
+      font-weight: bold; }
+
+.contact .contact-info {
+  margin-bottom: 20px; }
+  .contact .contact-info .contact-info-title {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px; }
+    .contact .contact-info .contact-info-title i {
+      margin-right: 10px; }
+  .contact .contact-info .contact-info-text {
+    margin: 10px 0 10px 20px; }
+.contact .contact-form input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  padding-left: 20px; }
+  .contact .contact-form input:required:valid {
+    border-color: green; }
+  .contact .contact-form input:required:invalid {
+    border-color: red; }
+.contact .contact-form .form-message {
+  padding: 0 !important;
+  margin-bottom: 10px; }
+  .contact .contact-form .form-message textarea {
+    width: 100%;
+    padding: 20px;
+    resize: none; }
+.contact .contact-form button {
+  float: left;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: darkgray;
+  border: 1px solid darkgray;
+  border-radius: 0;
+  padding: 10px 20px;
+  background-color: #fff; }
+  .contact .contact-form button:hover {
+    background-color: red;
+    color: white; }
+.contact .contact-form p {
+  font-size: 16px;
+  line-height: 38px; }
+
+@media screen and (max-width: 767px) {
+  .our-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
+  .contact-form p.form-tip {
+    line-height: 43px; } }
+@media screen and (max-width: 500px) {
+  .our-contacts {
+    display: none; }
+
+  p.form-tip {
+    display: none; } }
+footer {
+  background: red;
+  color: white;
+  position: relative; }
+  footer ul {
+    padding-left: 0;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer ul li {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-left: 30px;
+      padding-top: 10px; }
+      footer ul li:hover {
+        border-color: black; }
+      footer ul li a {
+        padding: 10px;
+        color: white; }
+        footer ul li a:hover {
+          color: black; }
+  footer .decorative-line {
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 70%;
+    height: 2px;
+    width: 50px;
+    background: white; }
+  footer p.copy {
+    color: white;
+    font-size: 30px; }
+
+/*--------------------------------------------------
+    [Back To Top Theme Button]
+----------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: inline-block;
+  z-index: 9;
+  width: 40px;
+  height: 40px;
+  font-size: 11px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  line-height: 3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: red;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px;
+  -webkit-transform: translate3d(0, 50px, 0);
+  -moz-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+  .back-to-top:hover {
+    color: white;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+  .back-to-top:focus, .back-to-top:hover {
+    text-decoration: none; }
+
+/* The Button Becomes Visible */
+.back-to-top.back-to-top-is-visible {
+  visibility: visible;
+  opacity: .6;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+  .back-to-top.back-to-top-is-visible:hover {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+
+/* If the user keeps scrolling down, the button is out of focus and becomes less visible */
+.back-to-top.back-to-top-fade-out {
+  opacity: .4; }
+  .back-to-top.back-to-top-fade-out:hover {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }

@@ -1,3 +1,4 @@
+@import "mixins";
 @import "animated";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
@@ -5,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 
 $lightGrey: rgba(248, 248, 248, 0.95);
+$greyForm: rgb(169, 169, 169);
 
 body {
   color: white;
@@ -109,7 +111,14 @@ h6 {
     -webkit-transition: all .5s ease-in-out, padding .5s ease-in-out;
     -moz-transition: all .5s ease-in-out, padding .5s ease-in-out;
     transition: all .5s ease-in-out, padding .5s ease-in-out;
+
+    a,
+    .navbar-toggle{
+      color: black !important;
+    }
+    background: $lightGrey;
   }
+
   .navbar-toggle {
     color: white;
   }
@@ -175,8 +184,8 @@ h6 {
 
 .services {
 
-  p{
-    font-size:17px;
+  p {
+    font-size: 17px;
   }
 
   .spinning {
@@ -249,16 +258,15 @@ h6 {
     color: #3c3c3c;
   }
 
-  .section-info .section-header-text{
+  .section-info .section-header-text {
     margin-top: 20px;
     line-height: 26px;
   }
 
+  .about {
+    .about-us-text {
 
-  .about{
-    .about-us-text{
-
-      :nth-last-child(2){
+      :nth-last-child(2) {
         display: none;
       }
     }
@@ -269,10 +277,9 @@ h6 {
 
 .about {
   background: #F8F8F8;
-  p{
+  p {
     font-size: 17px;
   }
-
 
   .item {
     background: white;
@@ -375,7 +382,8 @@ h6 {
 
 }
 
-// carousel styles
+// about us carousel styles
+
 .owl-prev {
   width: 50px;
   height: 50px;
@@ -564,30 +572,38 @@ h6 {
 // blog start
 .blog {
 
-  img{
-    margin-right:0;
+  img {
+    margin-right: 0;
   }
 
-  .img-responsive{
+  .img-responsive {
     margin: 0 20px 20px 0 !important;
 
   }
 
-
+  .blog-readmore {
+    letter-spacing: 3px;
+  }
 
   .blog-item {
-    padding: 0 0 30px 0 ;
-    margin-bottom:40px;
+    padding: 0 0 30px 0;
+    margin-bottom: 40px;
     border-bottom: 1px solid #d9d9d9;
 
-    &:last-child{
-      border-bottom:none;
+    &:nth-child(2n-1) {
+      display: flex;
+      flex-direction: row-reverse;
+
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
 
     .blog-date {
 
       font-weight: 700;
-      padding-top:13px;
+      padding-top: 13px;
       text-align: center;
       vertical-align: middle;
       display: inline-block;
@@ -596,10 +612,10 @@ h6 {
       height: 70px;
       width: 70px;
       margin-right: 15px;
-      font-size:19px;
-      line-height:19px;
+      font-size: 19px;
+      line-height: 19px;
 
-      .blog-date-month{
+      .blog-date-month {
         font-weight: 500;
       }
     }
@@ -608,28 +624,28 @@ h6 {
       display: inline-block;
       margin-bottom: 40px;
 
-      .blog-title{
+      .blog-title {
         font-size: 25px;
         text-transform: uppercase;
       }
 
-      .blog-author{
+      .blog-author {
         font-size: 17px;
         font-style: italic;
       }
     }
-    p{
+    p {
       font-size: 17px;
       margin-bottom: 35px;
     }
 
-    a{
+    a {
 
-      font-size:17px;
-      font-weight:bold;
+      font-size: 17px;
+      font-weight: bold;
       text-decoration: none;
 
-      &:hover{
+      &:hover {
         color: black;
 
       }
@@ -637,11 +653,17 @@ h6 {
 
   }
 }
+
 // blog iphone media
 @media screen and (max-width: 450px) {
-  .blog{
-    .blog-item{
-      .blog-date{
+  .blog {
+    .blog-item {
+
+      &:nth-child(2n-1) {
+        display: block;
+      }
+
+      .blog-date {
         width: 50px;
         height: 50px;
         font-size: 15px;
@@ -649,16 +671,16 @@ h6 {
         padding-top: 10px;
       }
 
-      .blog-item-title{
+      .blog-item-title {
         margin-bottom: 15px;
 
-        .blog-title{
-          font-size: 17px;
+        .blog-title {
+          font-size: 16px;
 
         }
 
-        .blog-author{
-          font-size: 15px;
+        .blog-author {
+          font-size: 14px;
         }
       }
     }
@@ -667,28 +689,28 @@ h6 {
 
 //blog tablets media
 @media screen and (max-width: 768px) {
-  .section-info{
-    h2{
+  .section-info {
+    h2 {
       font-size: 26px;
     }
 
-    .section-header-text{
-      margin-top:50px;
+    .section-header-text {
+      margin-top: 50px;
     }
   }
 
-  .blog{
-    .blog-item{
-      .blog-date{
+  .blog {
+    .blog-item {
+      .blog-date {
         width: 60px;
         height: 60px;
         font-size: 17px;
         line-height: 17px;
       }
 
-      .blog-item-title{
+      .blog-item-title {
         margin-bottom: 20px;
-        .blog-title{
+        .blog-title {
           font-size: 23px;
         }
       }
@@ -698,18 +720,18 @@ h6 {
 }
 
 @media screen and (max-width: 991px) {
-  .blog{
-    .blog-item{
-      .blog-date{
+  .blog {
+    .blog-item {
+      .blog-date {
         width: 60px;
         height: 60px;
         font-size: 17px;
         line-height: 17px;
       }
 
-      .blog-item-title{
+      .blog-item-title {
         margin-bottom: 20px;
-        .blog-title{
+        .blog-title {
           font-size: 18px;
         }
       }
@@ -720,3 +742,223 @@ h6 {
 
 //blog end
 //-----------------------------------
+
+// clients start
+.clients {
+  background: #eee;
+
+  //slider img
+  .swiper-slider {
+    @include position(relative);
+    @include size(100%);
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  .swiper-clients-img {
+    display: block;
+    @include size(190px, auto);
+    margin: 0 auto;
+    opacity: 1;
+    cursor: pointer;
+    @include cubic-transition($delay: 0, $duration: 200ms,
+    $property: (all));
+
+    &:hover {
+      opacity: 0.8;
+      @include cubic-transition($delay: 0, $duration: 200ms,
+      $property: (all));
+
+    }
+  }
+  //slider img end
+
+  //carousel
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: red;
+  }
+
+  .client-item {
+    margin-bottom: 25px;
+
+    .quote {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .client-name {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+  }
+  //carousel end
+
+}
+
+//clients end
+//------------------------------------
+
+//contact start
+
+.contact {
+  .contact-info {
+    margin-bottom: 20px;
+
+    .contact-info-title {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 10px;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+    .contact-info-text {
+      margin: 10px 0 10px 20px;
+    }
+  }
+
+  .contact-form {
+
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+      height: 50px;
+      padding-left: 20px;
+
+      &:required:valid{
+        border-color: green;
+      }
+
+      &:required:invalid{
+        border-color: red;
+      }
+    }
+
+    .form-message {
+
+      textarea {
+        width: 100%;;
+        padding: 20px;
+        resize: none;
+      }
+      padding: 0 !important;
+      margin-bottom: 10px;
+    }
+
+    button {
+      float: left;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: $greyForm;
+      border: 1px solid $greyForm;
+      border-radius: 0;
+      padding: 10px 20px;
+      background-color: #fff;
+
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 38px;
+    }
+
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .our-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-form {
+    p.form-tip {
+      line-height: 43px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .our-contacts {
+    display: none;
+  }
+
+  p.form-tip{
+    display: none;
+  }
+
+}
+
+//contact end
+//-----------------------------------
+
+footer {
+  background: red;
+  color: white;
+  position: relative;
+
+  ul {
+    padding-left: 0;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-left: 30px;
+      padding-top: 10px;
+
+      &:hover {
+
+        border-color: black;
+      }
+
+      a {
+        padding: 10px;
+        color: white;
+
+        &:hover {
+          color: black;
+
+        }
+      }
+
+    }
+
+  }
+
+  .decorative-line {
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 70%;
+
+    height: 2px;
+    width: 50px;
+    background: white;
+  }
+
+  p.copy {
+    color: white;
+    font-size: 30px;
+  }
+}
+
+@import "back-to-top";
